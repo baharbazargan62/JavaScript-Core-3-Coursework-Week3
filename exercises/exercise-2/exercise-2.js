@@ -70,3 +70,21 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+function peopleInGryffindor(){
+ const array=hogwarts.filter(el=>el.house==="Gryffindor")
+array.forEach((person)=>{
+  const {firstName,lastName}=person
+  console.log(firstName +" "+ lastName);
+})
+}
+peopleInGryffindor()
+
+
+function findTeachersWithPet(){
+const array=hogwarts.filter(el=>el.occupation==="Teacher" && el.pet !== null);
+array.forEach(teacher=>{
+  const {firstName,lastName}=teacher
+  console.log(firstName +" "+ lastName);
+})
+}
+findTeachersWithPet()
